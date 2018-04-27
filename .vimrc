@@ -1,0 +1,1 @@
+/Users/alison/.config/nvim/init.vim
