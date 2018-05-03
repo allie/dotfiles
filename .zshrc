@@ -1,5 +1,5 @@
 # Oh My Zsh config
-export ZSH=/Users/alison/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 ZSH_THEME=""
 plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
