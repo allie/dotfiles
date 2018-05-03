@@ -6,8 +6,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'ryanoasis/vim-devicons'
-Plug 'kien/ctrlp.vim'
-Plug 'Valloric/YouCompleteMe'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf'
 call plug#end()
 
 "General settings
@@ -24,13 +24,18 @@ set autoindent
 set autochdir
 set ignorecase
 set smartcase
+set cursorline
 cd %:p:h
 
 "Key mapping
 nnoremap <esc> :noh<return><esc>
 
 "Sudo write hack
-cmap w!! w !sudo tee > /dev/null %
+"cmap w!! w !sudo tee > /dev/null %
+ca w!! w !sudo tee % >/dev/null
+
+"Keep cursor centered
+set so=999
 
 "NERDTree settings
 let NERDTreeChDirMode = 2
@@ -39,11 +44,8 @@ nnoremap <leader>n :NERDTree .<CR>
 autocmd vimenter * if !argc() | NERDTree . | endif
 let g:NERDTreeWinSize=40
 
-"ctrlp
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'rw'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|bower_components'
+"FZF
+nnoremap <silent> <expr> <C-p> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":FZF -m\<cr>"
 
 "Colours
 syntax on
