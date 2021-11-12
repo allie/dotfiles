@@ -1,0 +1,6 @@
+donjayamanne.githistory
+dracula-theme.theme-dracula
+dsznajder.es7-react-js-snippets
+Gruntfuggly.activitusbar
+shd101wyy.markdown-preview-enhanced
+waderyan.gitblame
