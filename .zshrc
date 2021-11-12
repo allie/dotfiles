@@ -58,6 +58,7 @@ export EDITOR="nvim"
 export FZF_DEFAULT_COMMAND="fd --type f"
 
 # Configure PATH
+pathadd "/opt/homebrew/bin"
 pathadd "/usr/local/bin"
 pathadd "/usr/local/sbin"
 pathadd "$GOPATH/bin"
@@ -72,4 +73,6 @@ prompt pure
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(direnv hook zsh)"
 
